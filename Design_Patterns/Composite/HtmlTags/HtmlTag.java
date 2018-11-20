@@ -1,15 +1,7 @@
 package design.design_patterns.composite.htmltags;
 
-
-/*The Composite Pattern has four participants:
----------------------------------------------	
-1. Component
-2. Leaf
-3. Composite
-4. Client
---------------------------------------------*/
-
 import java.util.List;
+
 
 public abstract class HtmlTag {
 

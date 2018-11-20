@@ -6,6 +6,7 @@ package com.javacodegeeks.patterns.facadepattern;
 	of the ScheduleServer simpler
 */
 public class ScheduleServerFacade {
+
 	
 	private final ScheduleServer scheduleServer;
 	

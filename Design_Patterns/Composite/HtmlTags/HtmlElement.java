@@ -3,7 +3,6 @@ package design.design_patterns.composite.htmltags;
 
 public class HtmlElement extends HtmlTag {
 
-
     private String tagName;
     private String startTag;
     private String endTag;
@@ -41,3 +40,4 @@ public class HtmlElement extends HtmlTag {
         System.out.println(startTag + "" + tagBody + "" + endTag);
     }
 }
+

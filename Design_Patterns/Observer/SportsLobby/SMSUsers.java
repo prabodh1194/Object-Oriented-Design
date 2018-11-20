@@ -9,13 +9,16 @@ import com.observer.test.SubjectUtils.Subject;
 public class SMSUsers implements Observer {
 
     private final Subject subject;
+
     private String desc;
     private String userInfo;
 
     public SMSUsers(Subject subject, String userInfo) {
+
         if (subject == null) {
             throw new IllegalArgumentException("No Publisher found.");
         }
+
         this.subject = subject;
         this.userInfo = userInfo;
     }

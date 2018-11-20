@@ -4,6 +4,7 @@ package design.design_patterns.adapter.PaymentSys;
 
 public class XpayImpl implements Xpay{
 
+
 	private String creditCardNo;
 	private String customerName;
 	private String cardExpMonth;
@@ -70,5 +71,4 @@ public class XpayImpl implements Xpay{
 	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
-
 }

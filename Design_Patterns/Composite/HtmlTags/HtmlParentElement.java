@@ -6,12 +6,16 @@ import java.util.List;
 
 public class HtmlParentElement extends HtmlTag {
 
+
 	private String tagName;
 	private String startTag;
 	private String endTag;
+
 	private List<HtmlTag> childrenTag;
 
+
 	public HtmlParentElement(String tagName){
+
 		this.tagName = tagName;
 		this.startTag = "";
 		this.endTag = "";
@@ -50,11 +54,13 @@ public class HtmlParentElement extends HtmlTag {
 
 	@Override
 	public void generateHtml() {
+	
 		System.out.println(startTag);
+	
 		for(HtmlTag tag : childrenTag){
 			tag.generateHtml();
 		}
-		System.out.println(endTag);
 
+		System.out.println(endTag);
 	}
 }

@@ -14,8 +14,8 @@ public abstract class Car {
 		this.carType = carType;
 	}
 	
-	public abstract void assemble();
 	public abstract void produceProduct();
+	public abstract void assemble();
 	
 	public void printDetails(){
 		System.out.println("Car: "+carType+", Product:"+product.productName());

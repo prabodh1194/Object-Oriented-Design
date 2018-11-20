@@ -1,10 +1,110 @@
 
 	
+
 	
+	Resources
+	—————————
+
 	101 design patterns & tips for developers - sourcemaking (https://sourcemaking.Com)
 	
 	Software Design Patterns - Java Code Geeks (JCG) 
 
+
+
+	Types of the Design Patterns
+	————————————————————————————
+
+	i.   Creational Patterns	
+	ii.  Structural Patterns
+	iii. Behavioral Patterns
+
+
+	Creational Patterns	
+	———————————————————
+		Abstract Factory	
+		Builder
+		Factory Method	
+		Prototype
+		Singleton	
+
+
+	Structural Patterns	
+	———————————————————
+
+		Adapter
+		Bridge
+		Composite
+		Decorator
+		Façade
+		Flyweight
+		Proxy
+
+
+
+	Behavioral Patterns
+	———————————————————
+
+		Chain of Responsibility
+		Command
+		Interpreter
+		Iterator
+		Mediator
+		Memento
+		Observer
+		State
+		Strategy
+		Template Method
+		Visitor
+
+
+	Java Code Geeks (JCG)
+	—————————————————————
+
+	Adapter 
+
+	Facade 
+
+	Composite 
+
+	Bridge 
+
+	Singleton 
+
+	Observer 
+
+	Mediator 
+
+	Proxy 
+
+	Chain of Responsibility 
+
+	Flyweight 
+
+	Builder 
+
+	Factory Method 
+
+	Abstract Factory 
+
+	Prototype 
+
+	Memento 
+
+	Template 
+
+	State 
+
+	Strategy 
+
+	Command 
+
+	Interpreter 
+
+	Decorator 
+
+	Iterator 
+
+	Visitor 
 
 	
 	Software design patterns
@@ -149,7 +249,7 @@
 
 
 
-	
+
 
 
 	

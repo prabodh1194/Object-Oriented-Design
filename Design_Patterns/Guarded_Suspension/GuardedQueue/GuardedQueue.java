@@ -35,36 +35,37 @@ import java.util.Queue;
  * @see http://java-design-patterns.com/patterns/guarded-suspension/
  */
 public class GuardedQueue {
-  private static final Logger LOGGER = LoggerFactory.getLogger(GuardedQueue.class);
-  private final Queue<Integer> sourceList;
 
-  public GuardedQueue() {
-    this.sourceList = new LinkedList<>();
-  }
+    private static final Logger LOGGER = LoggerFactory.getLogger(GuardedQueue.class);
+    private final Queue<Integer> sourceList;
 
-  /**
-   * @return last element of a queue if queue is not empty
-   */
-  public synchronized Integer get() {
-    while (sourceList.isEmpty()) {
-      try {
-        LOGGER.info("waiting");
-        wait();
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
+    public GuardedQueue() {
+      this.sourceList = new LinkedList<>();
     }
-    LOGGER.info("getting");
-    return sourceList.peek();
-  }
 
-  /**
-   * @param e number which we want to put to our queue
-   */
-  public synchronized void put(Integer e) {
-    LOGGER.info("putting");
-    sourceList.add(e);
-    LOGGER.info("notifying");
-    notify();
-  }
+    /**
+     * @return last element of a queue if queue is not empty
+     */
+    public synchronized Integer get() {
+      while (sourceList.isEmpty()) {
+        try {
+          LOGGER.info("waiting");
+          wait();
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+      }
+      LOGGER.info("getting");
+      return sourceList.peek();
+    }
+
+    /**
+     * @param e number which we want to put to our queue
+     */
+    public synchronized void put(Integer e) {
+      LOGGER.info("putting");
+      sourceList.add(e);
+      LOGGER.info("notifying");
+      notify();
+    }
 }

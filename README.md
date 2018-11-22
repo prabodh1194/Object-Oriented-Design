@@ -106,6 +106,10 @@
 
 	Visitor 
 
+
+
+
+
 	
 	Software design patterns
 	————————————————————————

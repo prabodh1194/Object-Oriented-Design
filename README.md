@@ -862,18 +862,21 @@
 	Combining 
 	
 	
-	——————————————————————————————————————————————————————————————————————————————————————————————
-		
-		
-		Api gateway	 
+	—————————————————————————————————————————————————————————————————————————————————————————————
 
 		Abstract document	
 		
 		Abstract factory	
 		
+		ACYLIC VISITOR 
+
 		Adapter	
 		
-		Aggregator microservices	 
+		Aggregator microservices
+
+		AMBASSADOR 
+
+		Api gateway	 	 
 		
 		Async method invocation	
 		
@@ -885,9 +888,7 @@
 		
 		Business delegate	
 		
-		Cqrs	
-		
-		Caching	
+		Caching		
 		
 		Callback	
 		
@@ -895,15 +896,18 @@
 		
 		Collections	
 		
+		Command	
+
+		Composite	
+
 		Combined	
 		
 		Combining	
-		
-		Command	
-		
-		Composite	
+	
+		Cqrs
 		
 		Converter	
+
 		Curiously recurring template pattern (crtp)	
 		
 		Dao	
@@ -914,9 +918,13 @@
 		
 		Data transfer obj	
 		
-		Decorator	
+		Decorator
+
+		DELEGATION 	
 		
 		Dependency injection	
+
+		DIRTY FLAG 
 		
 		Double checked locking	
 		
@@ -926,9 +934,13 @@
 		
 		Eip aggregator	
 		
-		Eip wire tap	
-		
-		Eip splitter	
+		EIP MESSAGE CHANNEL 
+
+		EIP PUBLISH SUBSCRIBE 
+
+		Eip splitter
+
+		Eip wire tap		
 		
 		Event aggregator	
 		
@@ -945,10 +957,10 @@
 		Extension objects	
 		
 		Facade	
-		
-		Factory	
-		
+
 		Factory kit	
+
+		Factory (Factory method)
 		
 		Feature toggle	
 		
@@ -1041,10 +1053,14 @@
 		Repository	
 		
 		Resource acquisition is initialization	
+
+		RETRY 
 		
 		Semaphore	
 		
 		Servant	
+
+		SERVERLESS 
 		
 		Service layer	
 		
@@ -1056,11 +1072,11 @@
 		
 		State	
 		
-		Stepbuilder	
+		Step builder	
 		
 		Strategy	
 		
-		Template	
+		Template METHOD 	
 		
 		Thread local storage(tls)	
 		
@@ -1070,7 +1086,11 @@
 		
 		Tolerant reader	
 		
-		Twin	
+		Twin
+
+		Trampoline	
+
+		UNIT OF WORK  
 		
 		Value object	
 		

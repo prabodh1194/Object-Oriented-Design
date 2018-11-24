@@ -5,6 +5,7 @@ package com.state.robot;
  */
 public class RoboticStateOn implements RoboticState {
 
+
     private final Robot pandaRobot;
 
     public RoboticStateOn(Robot robot) {

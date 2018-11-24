@@ -1,6 +1,8 @@
 package com.javacodegeeks.patterns.proxypattern.protectionproxy;
 
+
 public class TestProtectionProxy {
+
 
 	public static void main(String[] args) {
 		
@@ -9,9 +11,10 @@ public class TestProtectionProxy {
 		owner.setReportGenerator(reportGenerator);
 		
 		Employee employee = new Employee();
-
 		reportGenerator = new ReportGeneratorProtectionProxy(employee);
+
 		employee.setReportGenerator(reportGenerator);
+		
 		System.out.println("For owner:");
 		System.out.println(owner.generateDailyReport());
 		System.out.println("For employee:");

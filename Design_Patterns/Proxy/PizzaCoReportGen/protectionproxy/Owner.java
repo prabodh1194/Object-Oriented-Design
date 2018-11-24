@@ -1,5 +1,7 @@
 package com.javacodegeeks.patterns.proxypattern.protectionproxy;
 
+
+
 public class Owner implements Staff {
 	
 	private boolean isOwner=true;

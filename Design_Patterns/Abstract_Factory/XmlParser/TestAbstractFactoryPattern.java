@@ -20,5 +20,4 @@ public class TestAbstractFactoryPattern {
 		msg = parser.parse();
 		System.out.println(msg);
 	}
-
 }

@@ -3,6 +3,7 @@ package com.javacodegeeks.patterns.prototypepattern;
 
 public class AccessControl implements Prototype{
 	
+	
 	private final String controlLevel;
 	private String access;
 	

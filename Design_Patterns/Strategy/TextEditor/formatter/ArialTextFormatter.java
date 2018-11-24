@@ -1,5 +1,7 @@
 package com.javacodegeeks.patterns.strategypattern;
 
+
+
 public class ArialTextFormatter implements TextFormatter {
 
 	@Override

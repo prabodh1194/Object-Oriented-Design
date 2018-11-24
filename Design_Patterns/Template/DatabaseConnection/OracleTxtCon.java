@@ -16,6 +16,4 @@ public class OracleTxtCon extends ConnectionTemplate{
 	public void setData() {
 		System.out.println("Setting up data from txt file....");
 	}
-
-
 }

@@ -44,7 +44,6 @@ public class Robot implements RoboticState {
         this.roboticStateOn = roboticStateOn;
     }
 
-
     // setter and the getter of the robotic state off
     public RoboticState getRoboticStateOff() {
         return roboticStateOff;
@@ -78,7 +77,9 @@ public class Robot implements RoboticState {
         roboticState.off();
     }
 
-    // after walking, standby for a while
+    /*
+    * after walking, standby for a while
+    */
     @Override
     public void walk() {
         roboticState.walk();
@@ -91,7 +92,6 @@ public class Robot implements RoboticState {
         roboticState.cook();
         setRoboticState(getRoboticStateStandby());
     }
-
 }
 
 

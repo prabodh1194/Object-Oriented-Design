@@ -8,6 +8,7 @@ import com.factory.test.parser.XmlParser;
  */
 public class ResponseXmlDisplayService extends DisplayService{
 
+
     @Override
     protected XmlParser getParser() {
         return new ResponseXmlParser();

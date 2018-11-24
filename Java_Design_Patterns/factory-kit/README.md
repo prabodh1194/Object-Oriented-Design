@@ -1,6 +1,16 @@
+---
+layout: pattern
+title: Factory Kit
+folder: factory-kit
+permalink: /patterns/factory-kit/
+categories: Creational
+tags:
+ - Java
+ - Difficulty-Beginner
+ - Functional
+---
 
 ## Intent
-——————————————————————
 Define a factory of immutable content with separated builder and factory interfaces.
 
 ![alt text](./etc/factory-kit.png "Factory Kit")

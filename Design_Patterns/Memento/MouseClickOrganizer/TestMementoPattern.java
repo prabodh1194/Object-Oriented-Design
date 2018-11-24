@@ -1,6 +1,12 @@
 package com.javacodegeeks.patterns.mementopattern;
 
+
+/*
+* This class will be great to implement an undo application
+*/
 public class TestMementoPattern {
+
+
 
 	public static void main(String[] args) {
 		

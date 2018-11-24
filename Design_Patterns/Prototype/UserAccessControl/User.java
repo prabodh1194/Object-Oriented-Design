@@ -2,7 +2,6 @@ package com.javacodegeeks.patterns.prototypepattern;
 
 
 public class User {
-
 	
 	private String userName;
 	private String level;

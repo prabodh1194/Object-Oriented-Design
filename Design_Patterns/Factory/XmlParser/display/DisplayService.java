@@ -7,12 +7,14 @@ import com.factory.test.parser.XmlParser;
  */
 public abstract class DisplayService {
 
+
+	protected abstract XmlParser getParser();
+
     public void display(){
 
         XmlParser xmlParser = getParser();
+
         String message = xmlParser.parse();
         System.out.println(message);
     }
-
-    protected abstract XmlParser getParser();
 }

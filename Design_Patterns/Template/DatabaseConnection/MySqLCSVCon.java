@@ -21,5 +21,4 @@ public class MySqLCSVCon extends ConnectionTemplate{
 	public boolean disableLogging() {
 		return false;
 	}
-
 }

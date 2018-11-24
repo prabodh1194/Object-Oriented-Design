@@ -4,7 +4,11 @@ import java.rmi.Naming;
 
 import com.javacodegeeks.patterns.proxypattern.remoteproxy.ReportGenerator;
 
+/*
+* this is the report for the business owner 
+*/
 public class ReportGeneratorProtectionProxy implements ReportGeneratorProxy {
+
 
 	ReportGenerator reportGenerator;
 	Staff staff;

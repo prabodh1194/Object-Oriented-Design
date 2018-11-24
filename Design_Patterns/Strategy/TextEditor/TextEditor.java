@@ -1,5 +1,7 @@
 package com.javacodegeeks.patterns.strategypattern;
 
+
+
 public class TextEditor {
 	
 	private final TextFormatter textFormatter;

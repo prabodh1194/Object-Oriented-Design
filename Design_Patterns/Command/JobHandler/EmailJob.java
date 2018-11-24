@@ -2,7 +2,6 @@
 
 public class EmailJob implements Job {
 
-
     private Email email;
 
     public void setEmail(Email email) {

@@ -3,9 +3,10 @@ package com.state.robot;
 /**
  * Created by Chaklader on 2/15/17.
  */
-public class RoboticStateCook implements RoboticState{
+public class RoboticStateCook implements RoboticState {
 
-    private final  Robot robot;
+
+    private final Robot robot;
 
     public RoboticStateCook(Robot robot) {
         this.robot = robot;

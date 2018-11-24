@@ -33,6 +33,10 @@ public final class PlatformFactory {
 		throw new AssertionError("Cannot instantiate the class");
 	}
 	
+	/*
+	* get the platform object after checking if 
+	* already created the method is thread-safe 
+	*/
 	public static synchronized Platform getPlatformInstance(String platformType){
 		Platform platform = map.get(platformType);
 

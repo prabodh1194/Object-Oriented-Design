@@ -6,10 +6,11 @@ package com.state.robot;
 
 
 /*
-* state != behaviour
+* State is not the same as the behaviour
 *
-* states comes before the behaviour
-* the robot will pick a behaviour from a finite set while being in particular state
+* states preceeds the behaviour the robot will pick a 
+* behaviour from a finite set while being in particular 
+* state
 * */
 public interface RoboticState {
 

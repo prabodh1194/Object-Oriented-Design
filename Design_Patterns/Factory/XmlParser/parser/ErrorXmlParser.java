@@ -5,7 +5,6 @@ package com.factory.test.parser;
  */
 public class ErrorXmlParser implements XmlParser{
 
-
     @Override
     public String parse() {
         System.out.println("Parsing the error XML messages ...");

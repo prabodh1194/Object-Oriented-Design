@@ -2,7 +2,10 @@ package com.javacodegeeks.patterns.templatepattern;
 
 import java.util.Date;
 
+
+
 public abstract class ConnectionTemplate {
+
 	
 	private boolean isLoggingEnable = true;
 	
@@ -37,9 +40,16 @@ public abstract class ConnectionTemplate {
 		logging("Object destoryed ["+new Date()+"]");		
 	}
 	
+
+	// the subclasses need to implement the abstract methods 
 	public abstract void setDBDriver();
 
 	public abstract void setCredentials(); 
+
+	public abstract void setData();
+
+
+
 
 	public void connect(){
 		System.out.println("Setting connection...");
@@ -48,8 +58,6 @@ public abstract class ConnectionTemplate {
 	public void prepareStatement(){
 		System.out.println("Preparing insert statement...");
 	}
-	
-	public abstract void setData();
 	
 	public void insert(){
 		System.out.println("Inserting data...");
@@ -62,8 +70,11 @@ public abstract class ConnectionTemplate {
 	public void destroy(){
 		System.out.println("Destroying connection objects...");
 	}
-	
+
+	// disable the logging operation 
 	public boolean disableLogging(){
+
+		// this.isLoggingEnable = false;
 		return true;
 	}
 	

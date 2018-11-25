@@ -30,14 +30,14 @@ package com.iluwatar.adapter;
  */
 public class FishingBoatAdapter implements RowingBoat {
 
-  private FishingBoat boat;
+	private FishingBoat boat;
 
-  public FishingBoatAdapter() {
-    boat = new FishingBoat();
-  }
+	public FishingBoatAdapter() {
+		boat = new FishingBoat();
+	}
 
-  @Override
-  public void row() {
-    boat.sail();
-  }
+	@Override
+	public void row() {
+		boat.sail();
+	}
 }

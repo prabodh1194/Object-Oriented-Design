@@ -13,7 +13,6 @@ public class HtmlParentElement extends HtmlTag {
 
 	private List<HtmlTag> childrenTag;
 
-
 	public HtmlParentElement(String tagName){
 
 		this.tagName = tagName;

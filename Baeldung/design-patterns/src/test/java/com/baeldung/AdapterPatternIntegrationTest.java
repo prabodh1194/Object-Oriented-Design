@@ -11,7 +11,10 @@ import com.baeldung.adapter.Movable;
 import com.baeldung.adapter.MovableAdapter;
 import com.baeldung.adapter.MovableAdapterImpl;
 
+
 public class AdapterPatternIntegrationTest {
+
+
     @Test
     public void givenMovableAdapter_WhenConvertingMPHToKMPH_thenSuccessfullyConverted() {
         Movable bugattiVeyron = new BugattiVeyron();

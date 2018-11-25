@@ -35,6 +35,7 @@ public class SMSUsers implements Observer {
 
     @Override
     public void subscribe() {
+
         System.out.println("Subscribing "+userInfo+" to "+subject.subjectDetails()+" ...");
         this.subject.subscribeObserver(this);
         System.out.println("Subscribed successfully.");

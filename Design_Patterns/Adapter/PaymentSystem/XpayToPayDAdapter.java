@@ -1,15 +1,17 @@
 package design.design_patterns.adapter.PaymentSys;
 
 
-public class XpayToPayDAdapter implements PayD{
+
+public class XpayToPayDAdapter implements PayD {
+
+
+	private final Xpay xpay;
 
 	private String custCardNo;
 	private String cardOwnerName;
 	private String cardExpMonthDate;
 	private Integer cVVNo;
 	private Double totalAmount;
-	
-	private final Xpay xpay;
 	
 	public XpayToPayDAdapter(Xpay xpay){
 		this.xpay = xpay;

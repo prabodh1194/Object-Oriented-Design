@@ -50,6 +50,7 @@ abstract class Composite implements Component {
     }
 }
 
+
 // Two different kinds of "container" classes.  Most of the
 // "meat" is in the Composite base class.
 class Row extends Composite {

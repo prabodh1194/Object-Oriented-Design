@@ -4,7 +4,6 @@ package design.design_patterns.adapter.PaymentSys;
 
 public class XpayImpl implements Xpay{
 
-
 	private String creditCardNo;
 	private String customerName;
 	private String cardExpMonth;

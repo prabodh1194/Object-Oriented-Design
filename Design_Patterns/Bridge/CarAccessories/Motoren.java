@@ -1,7 +1,6 @@
 package com.car;
 
 
-/* car company based in New York, US*/
 public class Motoren extends Car{
 
 	private final Product product;

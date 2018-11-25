@@ -2,7 +2,11 @@ package design.design_patterns.adapter.iterenum;
 
 import java.util.*;
 
+
+
+
 public class EnumerationIterator implements Iterator<Object> {
+
 
     Enumeration<?> enumeration;
 

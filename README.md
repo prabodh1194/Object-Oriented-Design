@@ -21,7 +21,7 @@
 
 	Creational Patterns	
 	———————————————————
-	
+
 	Abstract Factory	
 	Builder
 	Factory Method	
@@ -164,95 +164,238 @@
 	Software design patterns
 	————————————————————————
 	
-	
-	1. Adapter design pattern
-	—————————————————————————
-	
-	The adapter pattern is a software design pattern (also known as wrapper, an alternative naming shared with the decorator pattern) that allows the interface of an existing class to be used as another interface.[1] it is often used to make existing classes work with others without modifying their source code.
-	
-	2. Facade design pattern
-	————————————————————————
-	The facade pattern makes a complex interface easier to use, using a facade class. The facade pattern provides a unified interface to a set of interface in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
-	
-	You want to provide a simple interface to a complex subsystem. Subsystems often get more complex as they evolve. Most patterns, when applied, result in more and smaller classes. This makes the subsystem more reusable and easier to customize, but it also becomes harder to use for clients that don’t need to customize it. A facade can provide a simple default view of the subsystem that is good enough for most clients. Only clients needing more customizability will need to look beyond the facade. There are many dependencies between clients and the implementation classes of an abstraction. Introduce a facade to decouple the subsystem from clients and other subsystems, thereby promoting subsystem independence and portability. You can layer your subsystems. Use a facade to define an entry point to each subsystem level. If subsystems are dependent, then you can simplify the dependencies between them by making them communicate with each other solely through their facades.
-	
-	3. Composite design pattern
-	The composite pattern allows you to compose objects into a tree structure to represent the part-whole hierarchy which means you can create a tree of objects that is made of different parts, but that can be treated as a whole one big thing. Composite lets clients to treat individual objects and compositions of objects uniformly, that’s the intent of the composite pattern.
-	
-	4. Bridge design pattern
-	The bridge pattern’s intent is to decouple an abstraction from its implementation so that the two can vary independently. It puts the abstraction and implementation into two different class hierarchies so that both can be extend independently.
-	
-	5. Singleton design pattern
-	The singleton pattern is used when there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point or when the sole instance should be extensible by sub-classing, and clients should be able to use an extended instance without modifying their code.
-	
-	6. Observer design pattern
-	The observer pattern is a kind of behavior pattern which is concerned with the assignment of responsibilities between objects. It should be used when an abstraction has two aspects, one dependent on the other, when a change to one object requires changing others, and you don’t know how many objects need to be changed or when an object should be able to notify other objects without making assumptions about who these objects are. In other words, you don’t want these objects tightly coupled.
-	
-	7. Mediator design pattern
-	The mediator pattern defines an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently. Rather than interacting directly with each other, objects ask the mediator to interact on their behalf which results in reusability and loose coupling. You will learn how and when the mediator design pattern should be used and how to structure your code in order to implement it.
-	
-	8. Proxy design pattern
-	The proxy pattern provides a surrogate or placeholder for another object to control access to it. It comes up with many different variations. Some of the important variations are, remote proxy, virtual proxy, and protection proxy. In this lesson, we will know more about these variations and we will implement each of them in Java. But before we do that, let’s get to know more about the proxy pattern in general. You will learn how and when the proxy design pattern should be used and how to structure your code in order to implement it.
-	
-	9. Chain of responsibility design pattern
-	The chain of responsibility pattern is a behavior pattern in which a group of objects is chained together in a sequence and a responsibility (a request) is provided in order to be handled by the group. If an object in the group can process the particular request, it does so and returns the corresponding response. Otherwise, it forwards the request to the subsequent object in the group.
-	
-	10. Flyweight design pattern
-	The flyweight pattern is designed to control object creation where objects in an application have great similarities and are of a similar kind, and provides you with a basic caching mechanism. It allows you to create one object per type (the type here differs by a property of that object), and if you ask for an object with the same property (already created), it will return you the same object instead of creating a new one.
-	
-	11. Builder design pattern
-	The intent of the builder pattern is to separate the construction of a complex object from its representation, so that the same construction process can create different representations. This type of separation reduces the object size. The design turns out to be more modular with each implementation contained in a different builder object. Adding a new implementation (I.E., adding a new builder) becomes easier.
-	
-	12. Factory design pattern
-	The factory method pattern gives us a way to encapsulate the instantiations of concrete types. The factory method pattern encapsulates the functionality required to select and instantiate an appropriate class, inside a designated method referred to as a factory method. The factory method selects an appropriate class from a class hierarchy based on the application context and other influencing factors. It then instantiates the selected class and returns it as an instance of the parent class type.
-	
-	13. Abstract factory design pattern
-	The abstract factory (a.K.A. Kit) is a design pattern which provides an interface for creating families of related or dependent objects without specifying their concrete classes. The abstract factory pattern takes the concept of the factory method pattern to the next level. An abstract factory is a class that provides an interface to produce a family of objects.
-	
-	14. Prototype design pattern
-	The prototype design pattern is used to specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype. The concept is to copy an existing object rather than creating a new instance from scratch, something that may include costly operations. The existing object acts as a prototype and contains the state of the object.
-	
-	15. Memento design pattern
-	Sometimes it’s necessary to record the internal state of an object. This is required when implementing checkpoints and “undo” mechanisms that let users back out of tentative operations or recover from errors. You must save state information somewhere, so that you can restore objects to their previous conditions. But objects normally encapsulate some or all of their state, making it inaccessible to other objects and impossible to save externally. Exposing this state would violate encapsulation, which can compromise the application’s reliability and extensibility. The memento pattern can be used to accomplish this without exposing the object’s internal structure.
-	
-	16. Templete design pattern
-	The template design pattern is a behavior pattern and, as the name suggests, it provides a template or a structure of an algorithm which is used by users. A user provides its own implementation without changing the algorithm’s structure. The template pattern defines the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses to redefine certain steps of an algorithm without changing the algorithm’s structure.
-	
-	17. State design pattern
-	The state design pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class. The state of an object can be defined as its exact condition at any given point of time, depending on the values of its properties or attributes. The set of methods implemented by a class constitutes the behavior of its instances. Whenever there is a change in the values of its attributes, we say that the state of an object has changed.
-	
-	18. Strategy design pattern
-	The strategy design pattern seems to be the simplest of all design patterns, yet it provides great flexibility to your code. This pattern is used almost everywhere, even in conjunction with the other design patterns. The strategy design pattern defines a family of algorithms, encapsulating each one, and making them interchangeable. Strategy lets the algorithm vary independently from the clients that use it.
-	
-	19. Command design pattern
-	The command design pattern is a behavioral design pattern and helps to decouples the invoker from the receiver of a request. The intent of the command design pattern is to encapsulate a request as an object, thereby letting the developer to parameterize clients with different requests, queue or log requests, and support undoable operations.
-	
-	20. Interpreter design pattern
-	The interpreter design pattern is a heavy-duty pattern. It’s all about putting together your own programming language, or handling an existing one, by creating an interpreter for that language. Given a language, we can define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
-	
-	21. Decorator design pattern
-	The intent of the decorator design pattern is to attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to sub-classing for extending functionality. The pattern is used to extend the functionality of an object dynamically without having to change the original class source or using inheritance. This is accomplished by creating an object wrapper referred to as a decorator around the actual object.
-	
-	22. Iterator design pattern
-	The intent of the iterator design pattern is to provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation. He iterator pattern allows a client object to access the contents of a container in a sequential manner, without having any knowledge about the internal representation of its contents.
-	
-	23. Visitor design pattern
-	The visitor design pattern provides you with a way to add new operations on the objects without changing the classes of the elements, especially when the operations change quite often. The intent of the visitor design pattern is to represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
-	
-	24. Collections design pattern
-	
-	25. Combined design pattern
-	
-	26. Combining design pattern
-	
-	27. Ducks design pattern
-	
-	28. Iterenum design pattern
-	
-	29. Templatemethod design pattern
-	
-	30. Delegation design pattern 
-	
+
+		Abstract Document	
+
+		Abstract Factory	
+
+		Acylic Visitor 
+
+		Adapter	
+
+		Aggregator Microservices
+
+		Ambassador 
+
+		Api Gateway	 	 
+
+		Async Method Invocation	
+
+		Balking	 
+
+		Bridge	
+
+		Builder	
+
+		Business Delegate	
+
+		Caching		
+
+		Callback	
+
+		Chain Of Responsibility	
+
+		Collections	
+
+		Command	
+
+		Composite	
+
+		Combined	
+
+		Combining	
+
+		Cqrs
+
+		Converter	
+
+		Curiously Recurring Template Pattern (Crtp)	
+
+		Dao	
+
+		Data Bus	
+
+		Data Mapper	
+
+		Data Transfer Obj	
+
+		Decorator
+
+		Delegation 	
+
+		Dependency Injection	
+
+		Dirty Flag 
+
+		Double Checked Locking	
+
+		Double Dispatch	
+
+		Ducks	
+
+		Eip Aggregator	
+
+		Eip Message Channel 
+
+		Eip Publish Subscribe 
+
+		Eip Splitter
+
+		Eip Wire Tap		
+
+		Event Aggregator	
+
+		Event Asynchronous	
+
+		Event Driven Architecture	
+
+		Event Queue	
+
+		Event Sourcing	
+
+		Execute Around	
+
+		Extension Objects	
+
+		Facade	
+
+		Factory Kit	
+
+		Factory (Factory Method)
+
+		Feature Toggle	
+
+		Fluent Interface	
+
+		Flux	
+
+		Fly Weight	
+
+		Front Controller	
+
+		Guarded Suspension	
+
+		Half Sync Half Async	
+
+		Hexagonal	
+
+		Intercepting Filter	
+
+		Interpreter	
+
+		Iterator	
+
+		Iterenum	
+
+		Layers	
+
+		Lazy Loading	
+
+		Marker	
+
+		Mediator	
+
+		Memento	
+
+		Message Channel	
+
+		Model View Controller	
+
+		Model View Presenter	
+
+		Module	
+
+		Monad	
+
+		Monostate	
+
+		Multiton	
+
+		Mute Idiom	
+
+		Mutex	
+
+		Naked Objects	
+
+		Null Object	
+
+		Object Mother	
+
+		Object Pool	
+
+		Observer	
+
+		Page Object	
+
+		Partial Response	
+
+		Poison Pill	
+
+		Private Class Data	
+
+		Producer Consumer	
+
+		Promise	
+
+		Property	
+
+		Prototype	
+
+		Proxy	
+
+		Publish Subscribe	
+
+		Queue Load Leveling	
+
+		Reactor	
+
+		Reader Writer Lock	
+
+		Repository	
+
+		Resource Acquisition Is Initialization	
+
+		Retry 
+
+		Semaphore	
+
+		Servant	
+
+		Serverless 
+
+		Service Layer	
+
+		Service Locator	
+
+		Singleton	
+
+		Specification	
+
+		State	
+
+		Step Builder	
+
+		Strategy	
+
+		Template Method 	
+
+		Thread Local Storage(TLS)	
+
+		Thread Pool	
+
+		Throttling	
+
+		Tolerant Reader	
+
+		Twin
+
+		Trampoline	
+
+		Unit Of Work  
+
+		Value Object	
+
+		Visitor	
 	
 	
 	
@@ -914,239 +1057,9 @@
 	
 	—————————————————————————————————————————————————————————————————————————————————————————————
 
-		Abstract document	
 		
-		Abstract factory	
-		
-		ACYLIC VISITOR 
 
-		Adapter	
-		
-		Aggregator microservices
-
-		AMBASSADOR 
-
-		Api gateway	 	 
-		
-		Async method invocation	
-		
-		Balking	 
-		
-		Bridge	
-		
-		Builder	
-		
-		Business delegate	
-		
-		Caching		
-		
-		Callback	
-		
-		Chain of responsibility	
-		
-		Collections	
-		
-		Command	
-
-		Composite	
-
-		Combined	
-		
-		Combining	
-	
-		Cqrs
-		
-		Converter	
-
-		Curiously recurring template pattern (crtp)	
-		
-		Dao	
-		
-		Data bus	
-		
-		Data mapper	
-		
-		Data transfer obj	
-		
-		Decorator
-
-		DELEGATION 	
-		
-		Dependency injection	
-
-		DIRTY FLAG 
-		
-		Double checked locking	
-		
-		Double dispatch	
-		
-		Ducks	
-		
-		Eip aggregator	
-		
-		EIP MESSAGE CHANNEL 
-
-		EIP PUBLISH SUBSCRIBE 
-
-		Eip splitter
-
-		Eip wire tap		
-		
-		Event aggregator	
-		
-		Event asynchronous	
-		
-		Event driven architecture	
-		
-		Event queue	
-		
-		Event sourcing	
-		
-		Execute around	
-
-		Extension objects	
-		
-		Facade	
-
-		Factory kit	
-
-		Factory (Factory method)
-		
-		Feature toggle	
-		
-		Fluent interface	
-		
-		Flux	
-		
-		Fly weight	
-		
-		Front controller	
-		
-		Guarded suspension	
-		
-		Half sync half async	
-		
-		Hexagonal	
-		
-		Intercepting filter	
-		
-		Interpreter	
-		
-		Iterator	
-		
-		Iterenum	
-		
-		Layers	
-		
-		Lazy loading	
-		
-		Marker	
-		
-		Mediator	
-		
-		Memento	
-		
-		Message channel	
-		
-		Model view controller	
-		
-		Model view presenter	
-		
-		Module	
-		
-		Monad	
-		
-		Monostate	
-		
-		Multiton	
-		
-		Mute idiom	
-		
-		Mutex	
-		
-		Naked objects	
-		
-		Null object	
-		
-		Object mother	
-		
-		Object pool	
-		
-		Observer	
-		
-		Page object	
-		
-		Partial response	
-		
-		Poison pill	
-		
-		Private class data	
-		
-		Producer consumer	
-		
-		Promise	
-		
-		Property	
-		
-		Prototype	
-		
-		Proxy	
-		
-		Publish subscribe	
-		
-		Queue load leveling	
-		
-		Reactor	
-		
-		Reader writer lock	
-		
-		Repository	
-		
-		Resource acquisition is initialization	
-
-		RETRY 
-		
-		Semaphore	
-		
-		Servant	
-
-		SERVERLESS 
-		
-		Service layer	
-		
-		Service locator	
-		
-		Singleton	
-		
-		Specification	
-		
-		State	
-		
-		Step builder	
-		
-		Strategy	
-		
-		Template METHOD 	
-		
-		Thread local storage(tls)	
-		
-		Thread pool	
-		
-		Throttling	
-		
-		Tolerant reader	
-		
-		Twin
-
-		Trampoline	
-
-		UNIT OF WORK  
-		
-		Value object	
-		
-		Visitor	
-
-	——————————————————————————————————————————————————————————————————————————————————————————————
+	————————————————————————————————————————————————————————————————————————————————————————————
 
 
 

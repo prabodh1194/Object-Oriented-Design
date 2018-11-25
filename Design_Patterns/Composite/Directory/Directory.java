@@ -19,8 +19,10 @@ class File implements AbstractFile {
     }
 }
 
+
 // Directory implements the "lowest common denominator"
 class Directory implements AbstractFile {
+
     private String name;
     private ArrayList includedFiles = new ArrayList();
 
@@ -45,6 +47,7 @@ class Directory implements AbstractFile {
 }
 
 public class CompositeDemo {
+    
     public static StringBuffer compositeBuilder = new StringBuffer();
 
     public static void main(String[] args) {

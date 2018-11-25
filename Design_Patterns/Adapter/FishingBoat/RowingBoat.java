@@ -29,6 +29,5 @@ package com.iluwatar.adapter;
  */
 public interface RowingBoat {
 
-  void row();
-
+  	void row();
 }

@@ -6,15 +6,16 @@ import com.observer.test.SubjectUtils.Subject;
 
 import java.util.List;
 
+
 /**
  * Created by Chaklader on 2/12/17.
  */
 public class CommentaryObject implements Subject, Commentary {
 
-
-    private final List<Observer> observers;
     private String desc;
     private final String subjectDetails;
+
+    private final List<Observer> observers;
 
     public CommentaryObject(List<Observer> observers, String subjectDetails) {
         this.observers = observers;

@@ -8,7 +8,9 @@ public class HtmlElement extends HtmlTag {
     private String endTag;
     private String tagBody;
 
+
     public HtmlElement(String tagName) {
+
         this.tagName = tagName;
         this.tagBody = "";
         this.startTag = "";

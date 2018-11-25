@@ -1,12 +1,8 @@
 package com.javacodegeeks.patterns.facadepattern;
 
 
-/* 
-	Make the complex operations 
-	of the ScheduleServer simpler
-*/
+// Make the complex operations of the ScheduleServer simpler
 public class ScheduleServerFacade {
-
 	
 	private final ScheduleServer scheduleServer;
 	

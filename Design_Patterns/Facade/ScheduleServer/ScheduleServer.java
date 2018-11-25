@@ -3,7 +3,6 @@ package com.javacodegeeks.patterns.facadepattern;
 
 public class ScheduleServer {
 
-	
 	public void startBooting(){
 		System.out.println("Starts booting...");
 	}

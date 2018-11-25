@@ -10,6 +10,27 @@ public class TestFacade {
 		ScheduleServerFacade facadeServer = new ScheduleServerFacade(scheduleServer);
 
 
+		// execute the complex operations one-by-one 
+		scheduleServer.startBooting();
+		scheduleServer.readSystemConfigFile();
+		scheduleServer.init();
+		scheduleServer.initializeContext();
+		scheduleServer.initializeListeners();
+		scheduleServer.createSystemObjects();
+		
+		System.out.println("Start working......");
+		System.out.println("After work done.........");
+		
+		scheduleServer.releaseProcesses();
+		scheduleServer.destory();
+		scheduleServer.destroySystemObjects();
+		scheduleServer.destoryListeners();
+		scheduleServer.destoryContext();
+		scheduleServer.shutdown();
+		//
+
+
+		// use the Facade pattern 
 		facadeServer.startServer();
 		
 		System.out.println("Start working......");

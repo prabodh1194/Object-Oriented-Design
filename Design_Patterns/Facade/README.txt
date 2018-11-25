@@ -1,216 +1,55 @@
 
 
-## Intent
-——————————————————————
-Provide a unified interface to a set of interfaces in a subsystem.
-Facade defines a higher-level interface that makes the subsystem easier to use.
+Intent
+——————
 
-## Explanation
+Facade provides a unified interface to a set of interfaces in a subsystem and defines a higher-level interface that makes the subsystem easier to use.
 
-Real world example
 
-> How does a goldmine work? "Well, the miners go down there and dig gold!" you say. That is what you believe because you are using a simple interface that goldmine provides on the outside, internally it has to do a lot of stuff to make it happen. This simple interface to the complex subsystem is a facade.
+Your company is a product based company and it has launched a product in the market, named 
+Schedule Server. It is a kind of server in itself, and it is used to manage jobs. The jobs 
+could be any kind of jobs like sending a list of emails, sms, reading or writing files from 
+a destination, or just simply transferring files from a source to the destination. The product 
+is used by the developers to manage such kind of jobs and able to concentrate more towards 
+their business goal. The server executes each job at their specified time and also manages 
+all underline issues like concurrency issue and security by itself. As a developer, one just 
+need to code only the relevant business requirements and a good amount of API calls is provided 
+to schedule a job according to their needs.
 
-In plain words
+Everything was going fine, until the clients started complaining about starting and stopping 
+the process of the server. They said, although the server is working great, the initializing 
+and the shutting down processes are very complex and they want an easy way to do that. The 
+server has exposed a complex interface to the clients which looks a bit hectic to them. We need to provide an easy way to start and stop the server.
 
-> Facade pattern provides a simplified interface to a complex subsystem.
+A complex interface to the client is already considered as a fault in the design of the current 
+system. But fortunately or unfortunately, we cannot start the designing and the coding from 
+scratch. We need a way to resolve this problem and make the interface easy to access.
 
-Wikipedia says
+The Facade Pattern makes a complex interface easier to use, using a Facade class. The Facade 
+Pattern provides a unified interface to a set of interface in a subsystem. Facade defines a 
+higher-level interface that makes the subsystem easier to use.
 
-> A facade is an object that provides a simplified interface to a larger body of code, such as a class library.
+The Facade unifies the complex low-level interfaces of a subsystem in-order to provide a simple 
+way to access that interface. It just provides a layer to the complex interfaces of the sub-system which makes it easier to use.
 
-**Programmatic Example**
-
-Taking our goldmine example from above. Here we have the dwarven mine worker hierarchy
-
-```
-public abstract class DwarvenMineWorker {
-
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenMineWorker.class);
-
-  public void goToSleep() {
-    LOGGER.info("{} goes to sleep.", name());
-  }
-
-  public void wakeUp() {
-    LOGGER.info("{} wakes up.", name());
-  }
-
-  public void goHome() {
-    LOGGER.info("{} goes home.", name());
-  }
-
-  public void goToMine() {
-    LOGGER.info("{} goes to the mine.", name());
-  }
-
-  private void action(Action action) {
-    switch (action) {
-      case GO_TO_SLEEP:
-        goToSleep();
-        break;
-      case WAKE_UP:
-        wakeUp();
-        break;
-      case GO_HOME:
-        goHome();
-        break;
-      case GO_TO_MINE:
-        goToMine();
-        break;
-      case WORK:
-        work();
-        break;
-      default:
-        LOGGER.info("Undefined action");
-        break;
-    }
-  }
-
-  public void action(Action... actions) {
-    for (Action action : actions) {
-      action(action);
-    }
-  }
-
-  public abstract void work();
-
-  public abstract String name();
-
-  static enum Action {
-    GO_TO_SLEEP, WAKE_UP, GO_HOME, GO_TO_MINE, WORK
-  }
-}
-
-public class DwarvenTunnelDigger extends DwarvenMineWorker {
-
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenTunnelDigger.class);
-
-  @Override
-  public void work() {
-    LOGGER.info("{} creates another promising tunnel.", name());
-  }
-
-  @Override
-  public String name() {
-    return "Dwarven tunnel digger";
-  }
-}
-
-public class DwarvenGoldDigger extends DwarvenMineWorker {
-
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenGoldDigger.class);
-
-  @Override
-  public void work() {
-    LOGGER.info("{} digs for gold.", name());
-  }
-
-  @Override
-  public String name() {
-    return "Dwarf gold digger";
-  }
-}
-
-public class DwarvenCartOperator extends DwarvenMineWorker {
-
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenCartOperator.class);
-
-  @Override
-  public void work() {
-    LOGGER.info("{} moves gold chunks out of the mine.", name());
-  }
-
-  @Override
-  public String name() {
-    return "Dwarf cart operator";
-  }
-}
-
-```
-
-To operate all these goldmine workers we have the facade
-
-```
-public class DwarvenGoldmineFacade {
-
-  private final List<DwarvenMineWorker> workers;
-
-  public DwarvenGoldmineFacade() {
-    workers = new ArrayList<>();
-    workers.add(new DwarvenGoldDigger());
-    workers.add(new DwarvenCartOperator());
-    workers.add(new DwarvenTunnelDigger());
-  }
-
-  public void startNewDay() {
-    makeActions(workers, DwarvenMineWorker.Action.WAKE_UP, DwarvenMineWorker.Action.GO_TO_MINE);
-  }
-
-  public void digOutGold() {
-    makeActions(workers, DwarvenMineWorker.Action.WORK);
-  }
-
-  public void endDay() {
-    makeActions(workers, DwarvenMineWorker.Action.GO_HOME, DwarvenMineWorker.Action.GO_TO_SLEEP);
-  }
-
-  private static void makeActions(Collection<DwarvenMineWorker> workers,
-      DwarvenMineWorker.Action... actions) {
-    for (DwarvenMineWorker worker : workers) {
-      worker.action(actions);
-    }
-  }
-}
-```
-
-Now to use the facade
-
-```
-DwarvenGoldmineFacade facade = new DwarvenGoldmineFacade();
-facade.startNewDay();
-// Dwarf gold digger wakes up.
-// Dwarf gold digger goes to the mine.
-// Dwarf cart operator wakes up.
-// Dwarf cart operator goes to the mine.
-// Dwarven tunnel digger wakes up.
-// Dwarven tunnel digger goes to the mine.
-facade.digOutGold();
-// Dwarf gold digger digs for gold.
-// Dwarf cart operator moves gold chunks out of the mine.
-// Dwarven tunnel digger creates another promising tunnel.
-facade.endDay();
-// Dwarf gold digger goes home.
-// Dwarf gold digger goes to sleep.
-// Dwarf cart operator goes home.
-// Dwarf cart operator goes to sleep.
-// Dwarven tunnel digger goes home.
-// Dwarven tunnel digger goes to sleep.
-```
-
-## Applicability
-Use the Facade pattern when
-
-* you want to provide a simple interface to a complex subsystem. Subsystems often get more complex  as they evolve. Most patterns, when applied, result in more and smaller classes. This makes the subsystem more reusable and easier to customize, but it also becomes harder to use for clients that don't need to customize it. A facade can provide a simple default view of the subsystem that is good enough for most clients. Only clients needing more customizability will need to look beyond the facade.
-* there are many dependencies between clients and the implementation classes of an abstraction. Introduce a facade to decouple the subsystem from clients and other subsystems, thereby promoting subsystem independence and portability.
-* you want to layer your subsystems. Use a facade to define an entry point to each subsystem level. If subsystems are dependent, then you can simplify the dependencies between them by making them communicate with each other solely through their facades.
-
-## Credits
-
-* [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
+A Facade is not just only able to simplify an interface, but it also decouples a client from a 
+subsystem. It adheres to the Principle of Least Knowledge, which avoids tight coupling between 
+the client and the subsystem. This provides flexibility: suppose in the above problem, the company 
+wants to add some more steps to start or stop the Schedule Server, that have their own different 
+interfaces. If you coded your client code to the facade rather than the subsystem, your client 
+code doesn’t need to be change, just the facade required to be changed, that’s would be delivered 
+with a new version to the client.
 
 
 
+Usages
+——————
+
+You want to provide a simple interface to a complex subsystem. Subsystems often get more 
+complex as they evolve. Most patterns, when applied, result in more and smaller classes. This makes the subsystem more reusable and easier to customize, but it also becomes harder to use for clients that don’t need to customize it. A facade can provide a simple default view of the subsystem that is good enough for most clients. Only clients needing more customizability will need to look beyond the facade.
+
+There are many dependencies between clients and the implementation classes of an            abstraction. Introduce a facade to decouple the subsystem from clients and other subsystems, thereby promoting subsystem independence and portability.
+
+You can layer your subsystems. Use a facade to define an entry point to each subsystem level. If subsystems are dependent, then you can simplify the dependencies between them by making them communicate with each other solely through their facades.
 
 
-Participants
-
-    The classes and objects participating in this pattern are:
-
-Facade   (MortgageApplication)
-knows which subsystem classes are responsible for a request.
-delegates client requests to appropriate subsystem objects.
-Subsystem classes   (Bank, Credit, Loan)
-implement subsystem functionality.
-handle work assigned by the Facade object.
-have no knowledge of the facade and keep no reference to it.

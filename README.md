@@ -1,13 +1,21 @@
 
 	
 
-	
-	Resources
-	—————————
 
-	101 design patterns & tips for developers - sourcemaking (https://sourcemaking.Com)
+	Object oriented design
+	——————————————————————
 	
-	Software Design Patterns - Java Code Geeks (JCG) 
+	1. Object oriented programming (oop) concepts 
+		
+		Encapsulation
+		inheritance
+		polymorphism
+		abstraction
+	
+	2. Design patterns
+	
+	3. Solid principles
+
 
 
 
@@ -158,11 +166,28 @@
 
 
 
+	Resources
+	—————————
+
+	101 design patterns & tips for developers - sourcemaking (https://sourcemaking.Com)
+		
+		Design patterns 
+		
+		Anti-pattern
+		
+		Refractoring 
+		
+		UML
+	
+	
+	Software Design Patterns - Java Code Geeks (JCG) 
+
+
 
 
 	
-	Software design patterns
-	————————————————————————
+	Comprehensive List
+	——————————————————
 	
 
 		Abstract Document	
@@ -451,15 +476,7 @@
 
 	
 	
-	Object oriented design
-	——————————————————————
 	
-	1. Object oriented programming (oop) concepts like
-	Encapsulation, inheritance, polymorphism and abstraction
-	
-	2. Design patterns
-	
-	3. Solid principles
 	
 	
 	

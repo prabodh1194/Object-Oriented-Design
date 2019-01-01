@@ -1022,39 +1022,41 @@
 	
 	BOOKS
 	—————
-	
-	Patterns for parallel programming - Timothy g. Mattson
-
-	Design patterns: elements of reusable object-oriented software 
-
-	J2ee design patterns - william crawford
-
-	Elegant objects I & II - yegor bugayenko
-	
-	Head first design patterns
-
-	Head first object-oriented design and analysis
-	
-	MODERN JAVA EE DESIGN PATTERNS - MARKUS EISELE
-	
 		
-	MICRO-SERVICE ARCHITECTURE
-	——————————————————————————
-	
-	Building Micro-services - Sam Newman/ Oreilly 
+		Patterns for parallel programming - Timothy g. Mattson
 
-	Production‑ready Micro-services: building standardized systems - Susan J. Fowler/ Oreilly 
+		Design patterns: elements of reusable object-oriented software 
 
-	Micro-service architecture: aligning principles, practices, and culture - Irakli Nadareishvili/ Oreilly 
+		J2ee design patterns - william crawford
 
-	The tao of Micro-services - Richard Rodger
+		Elegant objects I & II - yegor bugayenko
+		
+		Head first design patterns
 
-	Spring Micro-services in action - John Carnell
+		Head first object-oriented design and analysis
+		
+		Modern Java Ee Design Patterns - Markus Eisele
 
-	Micro-services: flexible software Architecture - Eberhard Wolff
+		Domain-Driven Design: Tackling Complexity in the Heart of Software -  Eric Evans 
+		
+			
+		MICRO-SERVICE ARCHITECTURE
+		——————————————————————————
+		
+		Building Micro-services - Sam Newman/ Oreilly 
 
-	Mastering Micro-services with java - Sourabh Sharma/ Packt
-	
+		Production‑ready Micro-services: building standardized systems - Susan J. Fowler/ Oreilly 
+
+		Micro-service architecture: aligning principles, practices, and culture - Irakli Nadareishvili/ Oreilly 
+
+		The tao of Micro-services - Richard Rodger
+
+		Spring Micro-services in action - John Carnell
+
+		Micro-services: flexible software Architecture - Eberhard Wolff
+
+		Mastering Micro-services with java - Sourabh Sharma/ Packt
+		
 	
 	
 	
@@ -1166,18 +1168,23 @@
             - http://www.oodesign.com/single-responsibility-principle.html
             - http://www.Javacodegeeks.com/2011/11/solid-single-responsibility-principle.html
             - more flavor: https://docs.google.com/open?id=0ByOwmqah_nuGNHEtcU5OekdDMkk
+        
         O - Open/Closed Principal  | On production level Objects are ready for extension for not for modification
             - http://www.oodesign.com/open-close-principle.html
             - https://en.wikipedia.org/wiki/Open/closed_principle
             - more flavor: http://docs.google.com/a/cleancoder.com/viewer?a=v&pid=explorer&chrome=true&srcid=0BwhCYaYDn8EgN2M5MTkwM2EtNWFkZC00ZTI3LWFjZTUtNTFhZGZiYmUzODc1&hl=en
+        
         L - Liskov Substitution Principal | Base Class and Derived class follow ‘IS A’ principal
             - http://www.oodesign.com/liskov-s-substitution-principle.html
             - http://stackoverflow.com/questions/56860/what-is-the-liskov-substitution-principle
             - more flavor: http://docs.google.com/a/cleancoder.com/viewer?a=v&pid=explorer&chrome=true&srcid=0BwhCYaYDn8EgNzAzZjA5ZmItNjU3NS00MzQ5LTkwYjMtMDJhNDU5ZTM0MTlh&hl=en
+    
+
         I - Interface segregation principle | clients should not be forced to implement interfaces they don't use
             - http://www.oodesign.com/interface-segregation-principle.html
             - Interface Segregation Principle in 5 minutes: https://www.Youtube.com/watch?v=3CtAfl7aXAQ
             - more flavor: http://docs.google.com/a/cleancoder.com/viewer?a=v&pid=explorer&chrome=true&srcid=0BwhCYaYDn8EgOTViYjJhYzMtMzYxMC00MzFjLWJjMzYtOGJiMDc5N2JkYmJi&hl=en
+    
         D - Dependency Inversion principle | Reduce the dependency In composition of objects.
             - http://www.oodesign.com/dependency-inversion-principle.html
             - http://stackoverflow.com/questions/62539/what-is-the-dependency-inversion-principle-and-why-is-it-important
@@ -1185,6 +1192,7 @@
 
 
     Scalability:
+
         Great overview: https://www.Youtube.com/watch?v=-W9F__D3oY4
         Short series: 
             - http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones

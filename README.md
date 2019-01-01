@@ -1038,6 +1038,13 @@
 		Modern Java Ee Design Patterns - Markus Eisele
 
 		Domain-Driven Design: Tackling Complexity in the Heart of Software -  Eric Evans 
+
+
+		Architecting Modern Java EE Applications - Sebastian Daschner
+
+		Restful Java With Jax-rs 2.0  - O’reilly (Designing Distributed Web Services)
+
+		Rest Assured With Jax-RS - Git Book
 		
 			
 		MICRO-SERVICE ARCHITECTURE
